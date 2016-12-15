@@ -1,0 +1,29 @@
+<%- include("../includes/header.ejs", {title:"Add New Motocross Rider"}); %>
+<div class="center">
+<head>
+    <title>Add A New Motocross Rider</title>
+</head>
+<body>
+<h1>Add A New Motocross Rider</h1>
+<form action="/rider/insert" method="get">
+    First Name: <input id="First_Name" name="First_Name" type="text" />
+    <br />
+    <br />
+    Last Name: <input id="Last_Name" name="Last_Name" type="text" />
+    <br />
+    <br />
+    Race Number: <input id="Rider_Number" name="Rider_Number" type="text" />
+    <br />
+    <br />
+    Current Rank: <input id="Rank" name="Rank" type="text" />
+    <br />
+    <br />
+    </br>
+    <input type="submit" />
+
+</form>
+<a href="/rider/all">Back to View All Riders</a>
+<br />
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

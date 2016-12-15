@@ -1,0 +1,17 @@
+<%- include("../includes/header.ejs", {title:"City - " + result[0].City}); %>
+<div class="center">
+<head>
+    <title>Race Location - <%= result[0].City %></title>
+</head>
+<body>
+    <h1>Location Information</h1>
+    <ul>
+        City: <%= result[0].City %> </br>
+        State: <%= result[0].State %>
+    </ul>
+    <a href="/location/all" style="color: #0002ff;">Back to View All Locations</a>
+    <br />
+    <a href="/" style="color: #0002ff;">Back to Main Page</a>
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

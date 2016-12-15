@@ -1,0 +1,99 @@
+<%- include("includes/header.ejs", {title: "About"}); %>
+
+
+<style>
+    body {
+
+        background-image: url(http://rx.iscdn.net/2011/03/5016_misc_indianapolis_2011_fredrickson_512_copy.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .center {
+        text-align: center;
+        background-color: lightcyan;
+    }
+    .left {
+        text-align: left;
+        background-color: lightcyan;
+
+    }
+
+
+</style>
+
+<div class="left">
+    <h2 class="text-info"  style="color: red;"><u>About This Website</u></h2>
+    <p class="text-muted"  style="color: #000000;"><b>
+        The primary goal of this database is to keep track of all Lucas Oil Motocross race results
+        for the 450 class since the year of 2016. Motocross is thrilling off-road motorcycle races
+        that are hosted year round and all over the United States. Ranging from different classes,
+        these motocross racers compete to hold the championship title.
+
+        This database is designed to generate finish results from different race locations scheduled
+        throughout the season. Each event consists of 1 race with 10 riders. Each and every rider is
+        scored electronically each time they are on the track. A rider’s race number uniquely identifies
+        them in order to store their stats for later viewing. The points for each rider are generated
+        from their finished position of each race. Starting at 20 points for first place, 18 points
+        for second place, 16 points for third, and so on, decreasing by 2 points depending on which
+        position the rider finishes. The rider’s seasonal points are added up at the end of the race
+        season. The one with the most points will be at the top of the leaderboards determining their
+        rank.  Also, at the end of the season, riders can see their average finish positions to allow
+        them to seek for improvement for the next upcoming year. This database would be very useful
+        as it can be updated each year in order to keep motocross enthusiasts and riders up to date
+        with the most recent leaderboards statistics.
+    </b>
+    </p>
+    <h5 class="text-info"  style="color: red;">
+        Contact: MotocrossStatistics@yahoo.com
+    </h5>
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+    <div >
+        <a href="/diagram" class="button"><span>ER </br>Diagram</span></a>
+        <a href="/schema" class="button"><span>Relational Schema</span></a>
+    </div>
+    <br />
+    <a href="/"  style="color: #0002ff;">Back to Main Page</a>
+
+</div>
+
+<%- include("includes/footer.ejs"); %>

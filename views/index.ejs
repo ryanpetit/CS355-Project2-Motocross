@@ -1,0 +1,37 @@
+<%- include("./includes/header.ejs", {title: title}); %>
+
+<style>
+    .center {
+        text-align: center;
+        background-color: lightcyan;
+    }
+</style>
+
+<style>
+    body {
+
+        background-image: url(http://rx.iscdn.net/2011/03/5016_misc_indianapolis_2011_fredrickson_512_copy.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+
+</style>
+
+<div class="center">
+    <h1> <%= title %> </h1>
+    <a href="/rider/all" style="color: #ff0003;">Motocross Riders </a></br>
+    <a href="/event/all"style="color: green;">Events For This Season</a></br>
+    <a href="/location/all"style="color: #ff0003;">Current Race Locations</a></br>
+    <a href="/classes/all"style="color: green;">View All Race Classes</a></br>
+    <a href="/race/all"style="color: #ff0003;">View All Races</a></br>
+    <a href="/points/all"style="color: green;">View All Current Race Points For The Season</a></br>
+    <a href="/about" style="color: #ff0003;">About</a> </br>
+
+</div>
+
+
+<br />
+
+
+<%- include("./includes/footer.ejs"); %>

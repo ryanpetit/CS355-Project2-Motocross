@@ -1,0 +1,25 @@
+<%- include("../includes/header.ejs", {title:"Rider - View All"}); %>
+<div class="center">
+<h1>Motocross Riders</h1>
+
+<a href="/rider/add" style="color: #0002ff;">Add New Motocross Rider</a> <br />
+<table border="2", align="center">
+    <tr><th>Name</th><th>Action</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/rider/?Rider_Number=<%= result[i].Rider_Number %>" style="color: #d200ff"><%= result[i].First_Name + " " + result[i].Last_Name %> </a></td>
+        <td>
+            <button style="background-color: green" onclick="event.preventDefault();window.location.href='/rider/edit/?Rider_Number=<%= result[i].Rider_Number %>'">Edit</button>
+            <form action="/rider/delete/" style="float: right;">
+                <input type="hidden" name="Rider_Number" id="Rider_Number" value="<%= result[i].Rider_Number %>" />
+                <input style="background-color: red" type="submit" value="Delete"/>
+            </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/" style="color: #0002ff">Back to Main Page</a>
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

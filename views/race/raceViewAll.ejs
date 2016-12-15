@@ -1,0 +1,18 @@
+<%- include("../includes/header.ejs", {title:"Events - View All"}); %>
+
+<div class="center">
+<h1>Races</h1>
+
+<table border="2", align="center">
+    <tr><th>Event Name</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/race/?Event_ID=<%= result[i].Event_ID %>" style="color: red;"><%= result[i].Event_Name%> </a></td>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/" style="color: #0002ff;">Back to Main Page</a>
+</div>
+
+<%- include("../includes/footer.ejs"); %>

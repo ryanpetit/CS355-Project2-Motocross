@@ -1,0 +1,19 @@
+<%- include("../includes/header.ejs", {title:"Rider - " + result[0].First_Name + result[0].Last_Name}); %>
+<div class="center">
+<head>
+    <title>Motocross Rider - <%= result[0].First_Name %> <%= result[0].Last_Name %></title>
+</head>
+<body>
+<h1>Rider Information</h1>
+<ul>
+    Name: <%= result[0].First_Name %> <%= result[0].Last_Name %> </br>
+    Rider Number: <%= result[0].Rider_Number %> </br>
+    Rank: <%= result[0].Rank%> </br>
+
+</ul>
+<a href="/rider/all" style="color: #0002ff">Back to View All Riders</a>
+<br />
+<a href="/" style="color: #0002ff;">Back to Main Page</a>
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

@@ -1,0 +1,21 @@
+<%- include("../includes/header.ejs", {title:"Race Location - View All"}); %>
+<div class="center">
+<h1>Race Classes</h1>
+
+<table border="2", align="center">
+    <tr><th>Classes</th><th>Rider Numbers</th><th>Riders</th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><%= result[i].Class_Name%></td>
+        <td><%=result[i].Rider_Number%></td>
+        <td><a href="/rider/?Rider_Number=<%= result[i].Rider_Number %>"  style="color: #d200ff;"><%= result[i].First_Name + " " + result[i].Last_Name %></a></td>
+        </td>
+    </tr>
+    </tr>
+    <% } %>
+</table>
+<br />
+<a href="/" style="color: #0002ff;">Back to Main Page</a>
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

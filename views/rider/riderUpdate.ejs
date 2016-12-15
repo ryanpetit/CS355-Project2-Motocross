@@ -1,0 +1,18 @@
+<%- include("../includes/header.ejs", {title: "Update " + rider.First_Name + " " + rider.Last_Name}); %>
+<div class="center">
+<h1>Update <%= rider.First_Name + " " + rider.Last_Name + "'s Information" %></h1>
+<form action="/rider/update" method="get">
+    <input type="hidden" id="Rider_Number" name="Rider_Number" value="<%= rider.Rider_Number%>">
+    First Name: <input type="text" id="First_Name" name="First_Name" value="<%= rider.First_Name %>" />
+    <br />
+    Last Name: <input type="text" id="Last_Name" name="Last_Name" value="<%= rider.Last_Name %>" />
+    <br />
+    Current Rank: <input type="text" id="Rank" name="Rank" value="<%= rider.Rank %>" />
+    <br />
+    </br>
+    <input type="submit" />
+    <a href="/rider/all">Back to View All Riders</a>
+    <br />
+</form>
+</div>
+<!--<%- include("../includes/footer.ejs"); %>-->

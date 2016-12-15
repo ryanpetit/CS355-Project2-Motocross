@@ -1,0 +1,18 @@
+<%- include("../includes/header.ejs", {title:"Event - " + result[0].Event_Name}); %>
+<div class="center">
+<head>
+    <title><%= result[0].Event_Name %></title>
+</head>
+<body>
+    <h1>Events</h1>
+    <ul>
+        Event: <%= result[0].Event_Name %> </br>
+        Date: <%= result[0].Date %>
+    </ul>
+
+    <a href="/event/all" style="color: #0002ff;">Back to View All Events</a>
+    <br />
+    <a href="/" style="color: #0002ff;">Back to Main Page</a>
+</body>
+</div>
+<%- include("../includes/footer.ejs"); %>

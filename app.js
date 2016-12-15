@@ -6,12 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var school = require('./routes/school_routes');
-var account = require('./routes/account_routes');
-var resume = require('./routes/resume_routes');
-var company = require('./routes/company_routes');
-var address = require('./routes/address_routes');
-var skill = require('./routes/skill_routes');
+var rider = require('./routes/rider_routes');
+var event= require('./routes/event_routes');
+var location= require('./routes/location_routes');
+var classes= require('./routes/classes_routes');
+var race= require('./routes/race_routes');
+var points= require('./routes/points_routes');
+
+
+
+
 
 var app = express();
 
@@ -29,12 +33,16 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/school', school);
-app.use('/account', account);
-app.use('/resume', resume);
-app.use('/company', company);
-app.use('/address', address);
-app.use('/skill', skill);
+app.use('/rider', rider);
+app.use('/event', event);
+app.use('/location', location);
+app.use('/classes', classes);
+app.use('/race', race);
+app.use('/points', points);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
